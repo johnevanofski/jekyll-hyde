@@ -1,0 +1,8 @@
+/* Style for > 970px */
+@include media-query($desktop) {
+
+  html {
+    font-size: $font-size-desktop;
+  }
+
+}

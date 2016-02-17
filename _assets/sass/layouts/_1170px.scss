@@ -1,0 +1,8 @@
+/* Style for > 1170px */
+@include media-query($lg-desktop) {
+
+  html {
+    font-size: $font-size-lg-desktop;
+  }
+
+}

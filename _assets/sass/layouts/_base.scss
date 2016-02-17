@@ -1,0 +1,247 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  font-size: $font-size-phone;
+}
+
+/**
+ * Basic styling
+ */
+body {
+    font: 1rem $base-font-family;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+
+    -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+
+    *::selection {
+      background: $brand-color;
+      color: #ccc;
+  }
+    *::-moz-selection {
+      background: $brand-color;
+      color: #ccc;
+  }
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+body {
+  h1 { font-size: 2.2rem; }
+
+  h1, h2, h3 {
+    font-weight: 600;
+  }
+  h4, h5, h6 {
+    font-weight: 400;
+  }
+}
+
+p {
+  line-height: 1.4;
+}
+
+
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $base-font-weight;
+}
+
+
+
+/**
+ * Links
+ */
+a {
+    color: $brand-color;
+    text-decoration: none;
+
+    &:visited {
+        color: darken($brand-color, 15%);
+    }
+
+    &:hover {
+        color: $text-color;
+        text-decoration: none;
+    }
+}
+
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 15px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #eef;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+    max-width: $content-width;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    padding-bottom: $spacing-unit;
+    @extend %clearfix;
+
+    @include media-query($tablet) {
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        padding-right: $spacing-unit * 2;
+        padding-left: $spacing-unit * 2;
+    }
+}
+
+/* Social Media */
+
+.social-media {
+
+  .social {
+
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+
+    border-radius: 3rem;
+    background-color: $brand-color;
+
+    .fa {
+      position: relative;
+      top: 50%;
+      @include transform(translateY(-50%));
+
+      color: white;
+      font-size: 1.2rem;
+      text-align: center;
+
+    }
+  }
+}

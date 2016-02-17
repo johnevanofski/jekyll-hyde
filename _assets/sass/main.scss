@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+
+
+// Variables
+$base-font-family: "din", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #58595B;
+$background-color: #ffffff;
+$brand-color:      #EF4136;
+$cor-red: $brand-color;
+
+$grey-color:       #A3A9AC;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    900px;
+
+
+$tablet:          750px;
+$desktop:        970px;
+$lg-desktop:       1170px;
+
+//section-1
+$top-section-height: 85vh;
+
+//Font Sizes for rems
+$font-size-phone: 14px;
+$font-size-tablet: 14px;
+$font-size-desktop: 16px;
+$font-size-lg-desktop: 16px;
+
+
+
+// Use media queries like this:
+// @include media-query($phone) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+
+// transition mixin
+@mixin transition($params: all .5s) {
+  -webkit-transition: $params;
+  transition: $params;
+}
+
+// transform
+@mixin transform($params: translateY(-50%) translateX(-50%)) {
+  -ms-transform: $params;
+    -webkit-transform: $params;
+    transform: $params;
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "components/normalize",
+        "components/syntax-highlighting",
+        "components/fonts",
+
+        "layouts/base",
+        "layouts/750px",
+        "layouts/970px",
+        "layouts/1170px",
+
+        "pages/home"
+;
