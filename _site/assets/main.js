@@ -1,1 +1,0 @@
-Zepto(function(d){d("body").addClass("is-ready")});
