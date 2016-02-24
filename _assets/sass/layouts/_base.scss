@@ -40,7 +40,6 @@ body {
 }
 
 
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -66,8 +65,6 @@ p {
   line-height: 1.4;
 }
 
-
-
 /**
  * Images
  */
@@ -75,8 +72,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -88,8 +83,6 @@ figure > img {
 figcaption {
     font-size: $small-font-size;
 }
-
-
 
 /**
  * Lists
@@ -105,16 +98,12 @@ li {
     }
 }
 
-
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
 }
-
-
 
 /**
  * Links
@@ -133,8 +122,6 @@ a {
     }
 }
 
-
-
 /**
  * Blockquotes
  */
@@ -150,8 +137,6 @@ blockquote {
         margin-bottom: 0;
     }
 }
-
-
 
 /**
  * Code formatting
@@ -179,7 +164,6 @@ pre {
     }
 }
 
-
 /**
  * Clearfix
  */
@@ -195,8 +179,6 @@ pre {
 .clearfix {
   @extend %clearfix;
 }
-
-
 
 /**
  * Wrapper
@@ -216,32 +198,4 @@ pre {
         padding-right: $spacing-unit * 2;
         padding-left: $spacing-unit * 2;
     }
-}
-
-/* Social Media */
-
-.social-media {
-
-  .social {
-
-    display: inline-block;
-    height: 2rem;
-    width: 2rem;
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
-
-    border-radius: 3rem;
-    background-color: $brand-color;
-
-    .fa {
-      position: relative;
-      top: 50%;
-      @include transform(translateY(-50%));
-
-      color: white;
-      font-size: 1.2rem;
-      text-align: center;
-
-    }
-  }
 }
