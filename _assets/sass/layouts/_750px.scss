@@ -1,8 +1,0 @@
-/* Style for > 750px */
-@include media-query($tablet) {
-
-  html {
-    font-size: $font-size-tablet;
-  }
-
-}

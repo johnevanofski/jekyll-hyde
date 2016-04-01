@@ -32,12 +32,8 @@ assets:
     css: sass
     js: uglifier
   sources:
-    - _assets/img
-    - _assets/js
-    - _assets/sass
-    - _assets/fonts
-    - _assets/favicon
-
+    - _assets/
+    
 #Tracking Options
 fbpixel: ""
 ga: ""
